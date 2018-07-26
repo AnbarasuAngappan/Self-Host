@@ -1,0 +1,15 @@
+﻿<Window x:Class="SelfHost_WPFClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SelfHost_WPFClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="Main" Loaded="Main_Loaded">
+        <TextBlock Name="Serverdata" HorizontalAlignment="Left" Margin="217,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="224" Width="341"/>
+        <Label Content="Connection ID to the HUB :" HorizontalAlignment="Left" Margin="217,26,0,0" VerticalAlignment="Top" Width="163"/>
+        <Label Name="connectionID" Content="" HorizontalAlignment="Left" Margin="385,26,0,0" VerticalAlignment="Top" Width="auto"/>
+
+    </Grid>
+</Window>
