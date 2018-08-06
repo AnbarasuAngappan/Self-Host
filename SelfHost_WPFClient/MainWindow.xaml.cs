@@ -28,8 +28,9 @@ namespace SelfHost_WPFClient
 
         private void Main_Loaded(object sender, RoutedEventArgs e)
         {
-            var url = "http://localhost:8080/";
+            var url = "http://localhost:8090/";           
             HubConnection hubConnection = new HubConnection(url);
+            hubConnection.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             var proxy = hubConnection.CreateHubProxy("NotificationHub");
                       
 
@@ -38,7 +39,10 @@ namespace SelfHost_WPFClient
                 Serverdata.Text = "Connection to Server";
                 hubConnection.Start().Wait();
 
-                connectionID.Content =  hubConnection.ConnectionId.ToString();                
+                connectionID.Content =  hubConnection.ConnectionId.ToString();
+
+                //var txt = proxy.Invoke("GetArraymsg", "AnbuSai");
+
                 var text = proxy.Invoke<string[]>("Get").Result;
 
                 #region
@@ -68,7 +72,12 @@ namespace SelfHost_WPFClient
 
                     });
                 }
-             
+
+                //if (txt != null)
+                //{
+                //    txtName.Text = txt.Status.ToString();
+                //}
+
             }
             catch (Exception ex)
             {

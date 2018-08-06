@@ -11,7 +11,7 @@ namespace SelfHost_Server
     {
         static void Main(string[] args)
         {
-            string url = "http://localhost:8080/";
+            string url = "http://localhost:8090/";
             using (WebApp.Start<Startup>(url))
             {
                 Console.WriteLine($" Services started at:{DateTime.UtcNow:D} at Url:{url}");

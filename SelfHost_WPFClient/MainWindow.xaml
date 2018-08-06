@@ -10,6 +10,7 @@
         <TextBlock Name="Serverdata" HorizontalAlignment="Left" Margin="217,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="224" Width="341"/>
         <Label Content="Connection ID to the HUB :" HorizontalAlignment="Left" Margin="217,26,0,0" VerticalAlignment="Top" Width="163"/>
         <Label Name="connectionID" Content="" HorizontalAlignment="Left" Margin="385,26,0,0" VerticalAlignment="Top" Width="auto"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="23" Margin="284,347,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274"/>
 
     </Grid>
 </Window>
